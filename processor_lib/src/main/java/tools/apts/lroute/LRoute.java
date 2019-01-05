@@ -1,4 +1,4 @@
-package xzzb.com.processor_lib;
+package tools.apts.lroute;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -9,5 +9,5 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.CLASS)
 public @interface LRoute {
     String path();
-    String name()default  "";
+    String name() default  "";
 }

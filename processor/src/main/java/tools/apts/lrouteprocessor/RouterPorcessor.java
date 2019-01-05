@@ -1,4 +1,4 @@
-package xzzb.com.processor;
+package tools.apts.lrouteprocessor;
 
 import com.google.auto.service.AutoService;
 import com.squareup.javapoet.ClassName;
@@ -26,7 +26,7 @@ import javax.lang.model.element.Modifier;
 import javax.lang.model.element.TypeElement;
 import javax.lang.model.util.Elements;
 
-import xzzb.com.processor_lib.LRoute;
+import tools.apts.lroute.LRoute;
 
 @AutoService(Processor.class)
 public class RouterPorcessor extends AbstractProcessor {
@@ -84,9 +84,8 @@ public class RouterPorcessor extends AbstractProcessor {
         TypeSpec classTypeSpec = classBuilder.addMethod(printNameMethodSpec).build();
 
         try {
-
             JavaFile javaFile = JavaFile.builder(packageName, classTypeSpec)
-                    .addFileComment(" Leo Compile time annotations !")
+                    .addFileComment(" Do not modify, created by annotation processor !")
                     .build();
             javaFile.writeTo(filer);
         } catch (IOException exception) {

@@ -1,4 +1,4 @@
-package xzzb.com.runningannotation;
+package test.apts.lroute;
 
 import android.app.Application;
 
