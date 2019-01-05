@@ -33,6 +33,8 @@ public class Postcard {
             Intent intent = new Intent();
             ComponentName componentName = new ComponentName(packageName, path);
             intent.setComponent(componentName);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             LRouter.getContext().startActivity(intent);
 
         } else {
